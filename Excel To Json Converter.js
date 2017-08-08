@@ -2,7 +2,7 @@
 	Title : Excel to Json Converter
 	Author : Velmurugan P (Prasanthvel)
 	Email : prasanthvel@gmail.com
-	Last Modified : 
+	Last Modified : 8/8/2017 5.20 PM
 */
 
 var XLSX = require('xlsx');
