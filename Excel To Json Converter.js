@@ -24,7 +24,7 @@ for(var i = 0; i<sheetNames.length; i++) {
 		data = sheet[cell];
 	//	const content = JSON.stringify(data);
 	//	fs.appendFile("JsonFile", content, 'utf8');
-		fs.appendFile("JsonFile", sep+JSON.stringify(data), "utf8");
+		fs.appendFile("JsonFile", sep+JSON.stringify(data), "utf8"); // reduced to single line
 		if(!sep)
 			sep = ","; // creates ',' if there is new array is present
 	sum += 1;
