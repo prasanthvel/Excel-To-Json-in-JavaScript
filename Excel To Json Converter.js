@@ -18,11 +18,15 @@ for(var i = 0; i<sheetNames.length; i++) {
 	sheet = XLSX.utils.sheet_to_json(sheet); // to convert the sheet objects to json
 	var sheetNames = workbook.SheetNames;
 	var sum = 0;
+	var sep = ""; // to create ',' in  the end of each array
 	for (var cell in sheet) {
 	//	console.log(sheet[cell]);
 		data = sheet[cell];
-		const content = JSON.stringify(data);
-		fs.appendFile("JsonFile", content, 'utf8');
+	//	const content = JSON.stringify(data);
+	//	fs.appendFile("JsonFile", content, 'utf8');
+		fs.appendFile("JsonFile", sep+JSON.stringify(data), "utf8");
+		if(!sep)
+			sep = ","; // creates ',' if there is new array is present
 	sum += 1;
 	}
 	fs.appendFile("JsonFIle", "]", 'utf8');
